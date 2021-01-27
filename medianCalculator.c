@@ -35,13 +35,13 @@ int main()
     int count;
     printf("How many numbers do you wanna input? : ");
     scanf("%d", &count);
-    float n[count - 1];
+    float arr[count - 1];
 
     // taking inputs
     for (int i = 0; i < count; i++)
     {
         printf("Enter value: ");
-        if (scanf("%f", &n[i]) == 0)
+        if (scanf("%f", &arr[i]) == 0)
         {
             printf("Wrong input. program terminated");
             return -1;
@@ -49,14 +49,14 @@ int main()
     }
 
     // sorting the array
-    sortArr(count, n);
+    sortArr(count, arr);
 
     // calculating median
     float median;
-    median = medianCalculator(count, n);
+    median = medianCalculator(count, arr);
 
     // printing the median
-    printf("The median of the given data is: %f", median);
+    printf("\nThe median of the given data is: %f", median);
 
     return 0;
 }
