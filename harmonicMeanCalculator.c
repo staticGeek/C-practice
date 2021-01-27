@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-// arithmetic mean calculator function
-double arithmeticMeanCalculator(int count, double *arr)
+// harmonic mean calculator function
+double harmonicMeanCalculator(int count, double *arr)
 {
-    double sum = 0, arithmeticMean;
+    double sum = 0, harmonicMean;
     for (int i = 0; i < count; i++)
     {
-        sum += arr[i];
+        sum += (1 / arr[i]);
     }
-    arithmeticMean = sum / count;
-    return arithmeticMean;
+    harmonicMean = count / sum;
+    return harmonicMean;
 }
 
 int main()
@@ -30,12 +30,12 @@ int main()
         }
     }
 
-    // calculating arithmetic mean
-    double arithmeticMean;
-    arithmeticMean = arithmeticMeanCalculator(count, arr);
+    // calculating harmonic mean
+    double harmonicMean;
+    harmonicMean = harmonicMeanCalculator(count, arr);
 
-    // printing the arithmetic mean
-    printf("\nThe arithmetic mean(average) of the given data is: %lf", arithmeticMean);
+    // printing the harmonic mean
+    printf("\nThe harmonic mean of the given data is: %lf", harmonicMean);
 
     return 0;
 }
