@@ -1,30 +1,16 @@
 #include <iostream>
 using namespace std;
 
-bool isPythagorean(int x, int y, int z)
+
+int isPythagorean(int a, int b, int c)
 {
-    int a = max(x, max(y, z)), b, c;
-
-    if (a == x)
-    {
-        b = y;
-        c = z;
-    }
-    else if (a == y)
-    {
-        b = x;
-        c = z;
-    }
+    int hypotenuse = max(a,max(b,c));
+    int sum = a*a + b*b + c*c - hypotenuse*hypotenuse;
+    
+    if(hypotenuse*hypotenuse == sum)
+        return 1;
     else
-    {
-        b = x;
-        c = y;
-    }
-
-    if (a * a == b * b + c * c)
-        return true;
-        
-    return false;
+        return 0;
 }
 
 int main()
