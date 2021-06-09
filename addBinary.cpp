@@ -20,7 +20,7 @@ string addBinary(string a, string b)
         ans += to_string(sum % 2);
     }
     if (carry)
-        return ans += to_string(carry);
+        ans += to_string(carry);
     
     reverse(ans.begin(), ans.end());
 
